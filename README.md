@@ -23,7 +23,7 @@ This project brings together things I care about: strategy, data, prediction, an
 - **Backend**: FastAPI
 - **Modeling**: Python with Stockfish
 - **Data**: PGN files from historical games
-- 
+  
 ## ✅ Completed
 - [x] Built the foundation of the data pipeline to load PGN files, extract move histories, convert them into board states, and calculate basic variables like the material count for each player and the number of legal moves they have.
 
