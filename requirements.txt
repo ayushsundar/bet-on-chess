@@ -1,0 +1,5 @@
+python-chess
+stockfish
+numpy
+pandas
+matplotlib
