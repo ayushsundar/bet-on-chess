@@ -34,4 +34,6 @@ This project brings together things I care about: strategy, data, prediction, an
 - [ ] Build basic betting interface
 - [ ] Run simulations on archived games
 
+Made by @ayushsundar
+
 ---
