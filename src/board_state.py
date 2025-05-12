@@ -1,4 +1,4 @@
-import chess
+import chess # type: ignore
 
 def get_board_after_moves(moves):
     # Applies a list of moves onto a new board and return the current board state

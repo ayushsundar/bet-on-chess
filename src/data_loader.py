@@ -1,5 +1,6 @@
 import chess.pgn # type: ignore
 
+# Will be able to load in any number of games in at once, but do it one by one so they can all be used individually
 def load_games(path):
     with open(path, encoding = "utf-8") as pgn:
         while True:
@@ -8,6 +9,7 @@ def load_games(path):
                 break
             yield game
 
+# Returns a list of SAN moves from a chess game object
 def get_moves_from_game(game):
     board = game.board()
     moves = []
