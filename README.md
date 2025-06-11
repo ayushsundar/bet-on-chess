@@ -1,39 +1,63 @@
 # ♟️ bet-on-chess
 
-This is a project I’ve been wanting to build for a while. The idea is simple: what if you could bet on what move a chess player is going to make next?
+What if you could predict Magnus Carlsen’s next move in real time?
 
-Not just who wins or loses, but move-by-move predictions in real time. I’m starting with a focus on one player, probably Magnus, and trying to build a model that can predict his most likely next move given the current position. The goal is to emulate his playstyle using engine evaluations, past games, and some probability modeling.
+This project explores that idea. Instead of building a full betting platform right now, the focus is on creating a model that can output the top 5 most likely moves Magnus would play in any given position, along with a probability distribution for each move.
+
+Using historical PGN data, Stockfish evaluations, and style-aware modeling, the goal is to capture how Magnus thinks and plays, even in positions he has never seen before.
+
+---
 
 ## 🎯 Why I'm Building This
 
-Chess has blown up online, but watching games is still mostly passive. I want to create a way for people to engage with the game more deeply by putting their intuition to the test. If you think you know Magnus better than Stockfish, now you can prove it.
+Chess has grown massively online, but watching games is still mostly passive. I want to build a tool that lets people interact with elite-level chess more actively by predicting what a player like Magnus will do next.
 
-This project brings together things I care about: strategy, data, prediction, and real-time decision making.
+Rather than just asking who will win, this project asks:
 
-## 🧱 What I’m Planning
+> “What will Magnus play next?”
 
-- Build a model that predicts the next move Magnus would play in a given position
-- Generate dynamic odds based on those probabilities
-- Let people place play-money bets on what they think the next move will be
-- Eventually expand to other players and live games
+This combines a lot of my interests, including strategy, prediction, pattern recognition, and human decision-making.
 
-## 🔧 Tech Stack (planned)
+---
 
-- **Frontend**: React and Tailwind
-- **Backend**: FastAPI
-- **Modeling**: Python with Stockfish
-- **Data**: PGN files from historical games
-  
+## 🧱 What I’m Focusing On
+
+- Built a feature extractor to turn chess board states into numeric vectors
+- Used Stockfish to evaluate move quality and board advantage
+- Parsed Magnus’s historical PGN games to extract actual decisions
+- Grouped similar positions into clusters to capture decision patterns
+- Trained a classifier to predict likely moves in new positions
+- Outputted a ranked list of the top 5 most likely moves Magnus would make in a position, with probabilities
+- Blended predictions from the Magnus model with Stockfish suggestions for more reliable outputs
+
+---
+
+## 🔧 Tech Stack
+
+- **Data**: PGN files from Magnus Carlsen’s games
+- **Modeling**: Python, NumPy, Scikit-learn, LightGBM
+- **Engine Integration**: python-chess and Stockfish
+- **Tools**: Jupyter Notebooks, Matplotlib, Pickle
+
+---
+
 ## ✅ Completed
-- [x] Built the foundation of the data pipeline to load PGN files, extract move histories, convert them into board states, and calculate basic variables like the material count for each player and the number of legal moves they have.
+
+- Built the PGN loader and move history parser
+- Reconstructed board states and calculated key features
+- Integrated Stockfish to evaluate positions
+- Built an early odds engine using Stockfish and historical frequencies
+- Created a prototype model to generate move probabilities for unseen positions
+
+---
 
 ## 🚧 In Progress
 
-- [ ] Clean Magnus game data
-- [ ] Create move prediction model using Stockfish eval and past behavior
-- [ ] Build basic betting interface
-- [ ] Run simulations on archived games
-
-Made by @ayushsundar
+- Expanding the feature set for board position analysis
+- Training and validating the style-aware move prediction model
+- Testing prediction accuracy on new games
+- Blending the model with Stockfish in a smarter, context-aware way
 
 ---
+
+Made by [@ayushsundar]
