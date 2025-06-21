@@ -8,10 +8,8 @@ def softmax(x):
 
 def get_top_moves_with_odds(board, stockfish_path, magnus_model_path, top_n=3, depth=15):
     
-    # Connecting to Stockfish
+    # Connecting to Stockfish & getting the top Stockfish moves
     engine = chess.engine.SimpleEngine.popen_uci(stockfish_path)
-
-    # Getting the top Stockfish moves
     info = engine.analyse(board, chess.engine.Limit(depth=depth), multipv=top_n)
     stockfish_moves = []
     stockfish_scores = []
