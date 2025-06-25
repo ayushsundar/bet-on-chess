@@ -1,63 +1,46 @@
 # ♟️ bet-on-chess
 
-What if you could predict Magnus Carlsen’s next move in real time?
+This project is my attempt to predict what move Magnus Carlsen would play in any given chess position.
 
-This project explores that idea. Instead of building a full betting platform right now, the focus is on creating a model that can output the top 5 most likely moves Magnus would play in any given position, along with a probability distribution for each move.
-
-Using historical PGN data, Stockfish evaluations, and style-aware modeling, the goal is to capture how Magnus thinks and plays, even in positions he has never seen before.
+The goal isn’t to build a full betting platform (at least not yet), but to get a model that can output the top 5 most likely moves Magnus might play, with probabilities. It’s a mix of chess, modeling, and trying to capture player style in a way that feels fun to explore.
 
 ---
 
-## 🎯 Why I'm Building This
+## 🧠 Why I'm Doing This
 
-Chess has grown massively online, but watching games is still mostly passive. I want to build a tool that lets people interact with elite-level chess more actively by predicting what a player like Magnus will do next.
-
-Rather than just asking who will win, this project asks:
-
-> “What will Magnus play next?”
-
-This combines a lot of my interests, including strategy, prediction, pattern recognition, and human decision-making.
+I like projects where I can combine things I care about — in this case, chess, prediction, and understanding how people make decisions. Chess already has great engines, but they don’t tell you how Magnus *thinks*. This is just a way for me to explore that idea and see how far I can get.
 
 ---
 
-## 🧱 What I’m Focusing On
+## ✅ What I’ve Done
 
-- Built a feature extractor to turn chess board states into numeric vectors
-- Used Stockfish to evaluate move quality and board advantage
-- Parsed Magnus’s historical PGN games to extract actual decisions
-- Grouped similar positions into clusters to capture decision patterns
-- Trained a classifier to predict likely moves in new positions
-- Outputted a ranked list of the top 5 most likely moves Magnus would make in a position, with probabilities
-- Blended predictions from the Magnus model with Stockfish suggestions for more reliable outputs
-
----
-
-## 🔧 Tech Stack
-
-- **Data**: PGN files from Magnus Carlsen’s games
-- **Modeling**: Python, NumPy, Scikit-learn, LightGBM
-- **Engine Integration**: python-chess and Stockfish
-- **Tools**: Jupyter Notebooks, Matplotlib, Pickle
+- Parsed thousands of Magnus’s games from PGNs
+- Built a full feature extractor to turn board states into numeric input
+- Used Stockfish to annotate positions with evaluation data
+- Clustered similar board positions to group decision patterns
+- Trained a model to predict what move Magnus would likely play
+- Evaluated performance using top-1 and top-3 accuracy
+- Got a baseline model working with about 11% top-1 and 21% top-3 accuracy
 
 ---
 
-## ✅ Completed
+## 🔨 Tools and Stack
 
-- Built the PGN loader and move history parser
-- Reconstructed board states and calculated key features
-- Integrated Stockfish to evaluate positions
-- Built an early odds engine using Stockfish and historical frequencies
-- Created a prototype model to generate move probabilities for unseen positions
-
----
-
-## 🚧 In Progress
-
-- Expanding the feature set for board position analysis
-- Training and validating the style-aware move prediction model
-- Testing prediction accuracy on new games
-- Blending the model with Stockfish in a smarter, context-aware way
+- Python, Scikit-learn, LightGBM, NumPy, Matplotlib
+- PGN parsing with `python-chess`
+- Stockfish for evaluation
+- Jupyter notebooks for exploration
 
 ---
 
-Made by [@ayushsundar]
+## 🚧 What’s Left
+
+- Add better features (threats, king safety, piece activity)
+- Handle low-frequency moves more gracefully (maybe reweight or oversample)
+- Possibly train separate models per cluster
+- Visualize predictions on live boards
+- Keep tuning and testing — just curious how good this can get
+
+---
+
+This is just something I’m doing because I find it fun and interesting. I’ll keep updating it as I go.
