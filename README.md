@@ -8,7 +8,7 @@ The goal isn’t to build a full betting platform (at least not yet), but to get
 
 ## 🧠 Why I'm Doing This
 
-I like projects where I can combine things I care about — in this case, chess, prediction, and understanding how people make decisions. Chess already has great engines, but they don’t tell you how Magnus *thinks*. This is just a way for me to explore that idea and see how far I can get.
+I like projects where I can combine things I care about. In this case, it's chess, prediction, and understanding how people make decisions. Chess already has great engines, but they don’t tell you how Magnus thinks. This is just a way for me to explore that idea and see how far I can get.
 
 ---
 
@@ -39,7 +39,7 @@ I like projects where I can combine things I care about — in this case, chess,
 - Handle low-frequency moves more gracefully (maybe reweight or oversample)
 - Possibly train separate models per cluster
 - Visualize predictions on live boards
-- Keep tuning and testing — just curious how good this can get
+- Keep tuning and testing. I'm just curious how good this can get
 
 ---
 
