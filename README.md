@@ -14,32 +14,32 @@ I like projects where I can combine things I care about. In this case, it's ches
 
 ## ✅ What I’ve Done
 
-- Parsed thousands of Magnus’s games from PGNs
-- Built a full feature extractor to turn board states into numeric input
-- Used Stockfish to annotate positions with evaluation data
-- Clustered similar board positions to group decision patterns
-- Trained a model to predict what move Magnus would likely play
-- Evaluated performance using top-1 and top-3 accuracy
-- Got a baseline model working with about 11% top-1 and 21% top-3 accuracy
+- Parsed thousands of Magnus’s games from PGNs  
+- Built a full feature extractor to turn board states into numeric input  
+- Used Stockfish to annotate positions with evaluation data  
+- Clustered similar board positions to group decision patterns  
+- Trained a model to predict what move Magnus would likely play  
+- Evaluated performance using top-1 and top-3 accuracy  
+- Got a baseline model working with about 11% top-1 and 21% top-3 accuracy  
 
 ---
 
 ## 🔨 Tools and Stack
 
-- Python, Scikit-learn, LightGBM, NumPy, Matplotlib
-- PGN parsing with `python-chess`
-- Stockfish for evaluation
-- Jupyter notebooks for exploration
+- Python, Scikit-learn, LightGBM, NumPy, Matplotlib  
+- PGN parsing with `python-chess`  
+- Stockfish for evaluation  
+- Jupyter notebooks for exploration  
 
 ---
 
 ## 🚧 What’s Left
 
-- Add better features (threats, king safety, piece activity)
-- Handle low-frequency moves more gracefully (maybe reweight or oversample)
-- Possibly train separate models per cluster
-- Visualize predictions on live boards
-- Keep tuning and testing. I'm just curious how good this can get
+- Add better features (threats, king safety, piece activity)  
+- Handle low-frequency moves more gracefully (maybe reweight or oversample)  
+- Possibly train separate models per cluster  
+- Visualize predictions on live boards  
+- Keep tuning and testing. I'm just curious how good this can get  
 
 ---
 
