@@ -1,5 +1,5 @@
-# bet-on-chess
-TL;DR Predicting Magnus Carlsen's next move using machine learning and board state analysis.
+# bet-on-chess  
+**TL;DR** Predicting Magnus Carlsen's next move using machine learning and board state analysis.
 
 This project is my attempt to predict what move Magnus Carlsen would play in any given chess position.
 
@@ -21,8 +21,12 @@ I like projects where I can combine things I care about. In this case, it's ches
 - Extracted and saved a cleaned dataset of 883,935 usable positions  
 - Clustered similar board positions to explore stylistic groupings  
 - Trained a baseline model to predict Magnus’s next move  
-- Evaluated accuracy using top-1 and top-3 prediction metrics  
-- Established a working baseline with ~11% top-1 and ~21% top-3 accuracy  
+- Evaluated accuracy using top-1, top-3, and top-5 prediction metrics  
+- Improved model performance through hyperparameter tuning and label cleaning:
+  - **Top-1 Accuracy:** 12.6%  
+  - **Top-3 Accuracy:** 24.2%  
+  - **Top-5 Accuracy:** 30.4%  
+  - (Up from 11% / 21% baseline)
 
 ---
 
